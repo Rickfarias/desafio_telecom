@@ -1,16 +1,18 @@
-def menu():
-    menu = """
-    ========== MENU ==========
-    Selecione a opção desejada
 
-        [1]- Plano ideal
-        [2]- 0
+def recomendar_plano(consumo):
 
-    => """
-    return input(menu)
+        if consumo <= 10:
+            print("Plano Essencial Fibra - 50Mbps.")
+        
+        elif consumo <= 10 or consumo <= 20:
+            print("Plano Prata Fibra - 100Mbps.")
+        
+        elif consumo >= 20:
+            print("Plano Premium Fibra - 300Mbps.")
 
-def main():
-    opcao = menu
+        else:
+            print("Operação falhou! Valor informado é inválido, tente novamente.")
 
-    if opcao == "1":
-        consumo = float(input("Insira o seu consumo médio mensal: "))
+consumo = float(input())
+plano_recomendado = recomendar_plano(consumo=consumo)
+print(f"{recomendar_plano}")
