@@ -11,5 +11,4 @@ def recomendar_plano(consumo):
             print("Plano Premium Fibra - 300Mbps.")
 
 consumo = float(input())
-plano_recomendado = recomendar_plano(consumo=consumo)
 print(recomendar_plano(consumo))
